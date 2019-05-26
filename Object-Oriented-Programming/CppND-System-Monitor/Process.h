@@ -51,9 +51,7 @@ string Process::getPid() const {
 }
 
 string Process::formatString(std::string str, int len) {
-  for (int i = 0; i < 12; i++) {
-    str += " ";
-  }
+  str += "            ";
   return str.substr(0, len) + "  ";
 }
 
