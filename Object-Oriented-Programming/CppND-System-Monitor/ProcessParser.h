@@ -48,8 +48,6 @@ class ProcessParser {
     static bool isPidExisting(string pid);
 };
 
-// TODO: Define all of the above functions below:
-
 // Information regarding Linux proc filesystem can be found here:
 // http://man7.org/linux/man-pages/man5/proc.5.html
 // http://manpages.courier-mta.org/htmlman5/proc.5.html
