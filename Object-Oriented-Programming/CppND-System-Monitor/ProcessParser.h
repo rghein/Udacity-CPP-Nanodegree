@@ -133,9 +133,9 @@ std::string ProcessParser::getCpuPercent(string pid) {
   float starttime = stof(values[21]);
   float uptime = ProcessParser::getSysUpTime();
   float freq = sysconf(_SC_CLK_TCK);
-  float total_time = utime + stime + cutime + cstime;
+  float totalTime = utime + stime + cutime + cstime;
   float seconds = uptime - (starttime / freq);
-  result = 100.0 * ((total_time / freq) / seconds);
+  result = 100.0 * ((totalTime / freq) / seconds);
   return to_string(result);
 }
 
@@ -383,10 +383,10 @@ std::string ProcessParser::PrintCpuStats(std::vector<std::string> values1, std::
   this function has two paramaters: two vectors of relevant values.
   We use a formula to calculate overall activity of processor.
   */
-  float active_time = getSysActiveCpuTime(values2) - getSysActiveCpuTime(values1);
-  float idle_time = getSysIdleCpuTime(values2) - getSysIdleCpuTime(values1);
-  float total_time = active_time + idle_time;
-  float result = 100.0 * (active_time / total_time);
+  float activeTime = getSysActiveCpuTime(values2) - getSysActiveCpuTime(values1);
+  float idleTime = getSysIdleCpuTime(values2) - getSysIdleCpuTime(values1);
+  float totalTime = activeTime + idleTime;
+  float result = 100.0 * (activeTime / totalTime);
   return to_string(result);
 }
 
