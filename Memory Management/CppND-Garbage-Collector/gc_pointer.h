@@ -189,20 +189,20 @@ bool Pointer<T, size>::collect() {
 
   do {
     for (p = refContainer.begin(); p != refContainer.end(); p++) {
-    	if (p->refcount > 0) {
-    		continue;
-    	}
-    	memfreed = true;
-    	refContainer.remove(*p);
+      if (p->refcount > 0) {
+        continue;
+      }
+      memfreed = true;
+      refContainer.remove(*p);
 
-    	if (p->memPtr) {
-    		if (p->isArray) {
-  				delete[] p->memPtr;
-  			}
-      	else {
-    			delete p->memPtr;
-  			}
-  		}
+      if (p->memPtr) {
+        if (p->isArray) {
+          delete[] p->memPtr;
+        } 
+        else {
+          delete p->memPtr;
+        }
+      }
       break;
     }
   } while (p != refContainer.end());
