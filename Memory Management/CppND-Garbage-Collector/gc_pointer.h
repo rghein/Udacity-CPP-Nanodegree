@@ -16,7 +16,7 @@ template <class T, int size = 0>
 class Pointer {
   private:
     // refContainer maintains the garbage collection list.
-    static std::list<PtrDetails<T> > refContainer;
+    static std::list<PtrDetails<T>> refContainer;
     // addr points to the allocated memory to which
     // this Pointer pointer currently points.
     T *addr;
@@ -126,7 +126,7 @@ Pointer<T,size>::Pointer(T *t) {
   typename std::list<PtrDetails<T>>::iterator p;
   p = findPtrInfo(t);
 
-  if (p!=refContainer.end()) {
+  if (p != refContainer.end()) {
     p->refcount++;
   }
   else {
@@ -136,7 +136,7 @@ Pointer<T,size>::Pointer(T *t) {
   addr = t; 
   arraySize = size;
 
-  if(size >0){
+  if(size >0) {
   	isArray = true;
   }
   else { 
@@ -168,10 +168,10 @@ template <class T, int size>
 Pointer<T, size>::~Pointer() {
   // TODO: Implement Pointer destructor
   // Lab: New and Delete Project Lab
-  typename std::list <PtrDetails<T> >::iterator p;
+  typename std::list <PtrDetails<T>>::iterator p;
   p = findPtrInfo(addr);
 
-  if(p->refcount) {
+  if (p->refcount) {
     p->refcount--;
   }
   collect();
@@ -188,15 +188,15 @@ bool Pointer<T, size>::collect() {
   typename std::list<PtrDetails<T>>::iterator p;
 
   do {
-    for (p= refContainer.begin();p!=refContainer.end();p++) {
-    	if(p->refcount > 0) {
+    for (p = refContainer.begin(); p != refContainer.end(); p++) {
+    	if (p->refcount > 0) {
     		continue;
     	}
     	memfreed = true;
     	refContainer.remove(*p);
 
-    	if(p->memPtr) {
-    		if(p->isArray) {
+    	if (p->memPtr) {
+    		if (p->isArray) {
   				delete[] p->memPtr;
   			}
       	else {
@@ -205,7 +205,7 @@ bool Pointer<T, size>::collect() {
   		}
       break;
     }
-  } while (p!=refContainer.end());
+  } while (p != refContainer.end());
 
   return memfreed;
 }
@@ -220,7 +220,7 @@ T *Pointer<T, size>::operator=(T *t) {
   p->refcount--;
   p = findPtrInfo(t);
 
-  if (p!=refContainer.end()) {
+  if (p != refContainer.end()) {
   	p->refcount++;
   }
   else {
@@ -233,7 +233,7 @@ T *Pointer<T, size>::operator=(T *t) {
 
 // Overload assignment of Pointer to Pointer.
 template <class T, int size>
-Pointer<T, size> &Pointer<T, size>::operator=(Pointer &rv){
+Pointer<T, size> &Pointer<T, size>::operator=(Pointer &rv) {
   // TODO: Implement operator==
   // LAB: Smart Pointer Project Lab
   typename std::list<PtrDetails<T>>::iterator p;
