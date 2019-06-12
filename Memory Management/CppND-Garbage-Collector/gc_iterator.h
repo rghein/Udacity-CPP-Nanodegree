@@ -4,6 +4,9 @@
 //
 class OutOfRangeExc {
     // Add functionality if needed by your application.
+    OutOfRangeExc() {
+      std::cout << "Attempted Access is Out of Range" << std::endl;
+    }
 };
 
 // An iterator-like class for cycling through arrays
