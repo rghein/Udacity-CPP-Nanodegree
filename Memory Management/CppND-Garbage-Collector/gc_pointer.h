@@ -128,13 +128,14 @@ Pointer<T,size>::Pointer(T *t) {
     p->refcount++;
   }
   else {
-    PtrDetails<T> obj(t,size);
+    PtrDetails<T> obj(t, size);
     refContainer.push_front(obj);
   }
+
   addr = t; 
   arraySize = size;
 
-  if(size >0) {
+  if (size >0) {
   	isArray = true;
   }
   else { 
@@ -243,6 +244,7 @@ void Pointer<T, size>::showlist() {
   if (refContainer.begin() == refContainer.end()) {
     std::cout << " Container is empty!\n\n ";
   }
+
   for (p = refContainer.begin(); p != refContainer.end(); p++) {
     std::cout << "[" << (void *)p->memPtr << "]"
               << " " << p->refcount << " ";
