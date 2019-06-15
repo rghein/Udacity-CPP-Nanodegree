@@ -121,8 +121,6 @@ Pointer<T,size>::Pointer(T *t) {
   }
   first = false;
 
-  // TODO: Implement Pointer constructor
-  // Lab: Smart Pointer Project Lab
   typename std::list<PtrDetails<T>>::iterator p;
   p = findPtrInfo(t);
 
@@ -147,8 +145,6 @@ Pointer<T,size>::Pointer(T *t) {
 // Copy constructor.
 template< class T, int size>
 Pointer<T,size>::Pointer(const Pointer &ob) {
-  // TODO: Implement Pointer constructor
-  // Lab: Smart Pointer Project Lab
   typename std::list<PtrDetails<T>>::iterator p;
   p = findPtrInfo(ob.addr);
   p->refcount++;  // increment ref count
@@ -166,8 +162,6 @@ Pointer<T,size>::Pointer(const Pointer &ob) {
 // Destructor for Pointer.
 template <class T, int size>
 Pointer<T, size>::~Pointer() {
-  // TODO: Implement Pointer destructor
-  // Lab: New and Delete Project Lab
   typename std::list <PtrDetails<T>>::iterator p;
   p = findPtrInfo(addr);
 
@@ -181,9 +175,7 @@ Pointer<T, size>::~Pointer() {
 // one object was freed.
 template <class T, int size>
 bool Pointer<T, size>::collect() {
-  // TODO: Implement collect function
-  // LAB: New and Delete Project Lab
-  // Note: collect() will be called in the destructor
+  // collect() will be called in the destructor
   bool memfreed = false;
   typename std::list<PtrDetails<T>>::iterator p;
 
@@ -213,8 +205,6 @@ bool Pointer<T, size>::collect() {
 // Overload assignment of pointer to Pointer.
 template <class T, int size>
 T *Pointer<T, size>::operator=(T *t) {
-  // TODO: Implement operator==
-  // LAB: Smart Pointer Project Lab
   typename std::list<PtrDetails<T>>::iterator p;
   p = findPtrInfo(addr);
   p->refcount--;
@@ -234,8 +224,6 @@ T *Pointer<T, size>::operator=(T *t) {
 // Overload assignment of Pointer to Pointer.
 template <class T, int size>
 Pointer<T, size> &Pointer<T, size>::operator=(Pointer &rv) {
-  // TODO: Implement operator==
-  // LAB: Smart Pointer Project Lab
   typename std::list<PtrDetails<T>>::iterator p;
   p = findPtrInfo(addr);
   p->refcount--;
