@@ -5,6 +5,7 @@ CMakeFiles/traffic_simulation.dir/src/Graphics.cpp.o
  /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/Graphics.cpp
  /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/Graphics.h
  /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/Intersection.h
+ /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/TrafficLight.h
  /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/TrafficObject.h
  /usr/include/opencv4/opencv2/calib3d.hpp
  /usr/include/opencv4/opencv2/core.hpp
@@ -108,12 +109,14 @@ CMakeFiles/traffic_simulation.dir/src/Intersection.cpp.o
  /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/Intersection.cpp
  /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/Intersection.h
  /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/Street.h
+ /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/TrafficLight.h
  /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/TrafficObject.h
  /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/Vehicle.h
 CMakeFiles/traffic_simulation.dir/src/Street.cpp.o
  /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/Intersection.h
  /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/Street.cpp
  /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/Street.h
+ /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/TrafficLight.h
  /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/TrafficObject.h
  /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/Vehicle.h
 CMakeFiles/traffic_simulation.dir/src/TrafficLight.cpp.o
@@ -127,6 +130,7 @@ CMakeFiles/traffic_simulation.dir/src/TrafficSimulator.cpp.o
  /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/Graphics.h
  /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/Intersection.h
  /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/Street.h
+ /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/TrafficLight.h
  /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/TrafficObject.h
  /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/TrafficSimulator.cpp
  /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/Vehicle.h
@@ -231,6 +235,7 @@ CMakeFiles/traffic_simulation.dir/src/TrafficSimulator.cpp.o
 CMakeFiles/traffic_simulation.dir/src/Vehicle.cpp.o
  /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/Intersection.h
  /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/Street.h
+ /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/TrafficLight.h
  /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/TrafficObject.h
  /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/Vehicle.cpp
  /home/hein/Documents/C++Nanodegree/Concurrency/CppND-Program-a-Concurrent-Traffic-Simulation/src/Vehicle.h
