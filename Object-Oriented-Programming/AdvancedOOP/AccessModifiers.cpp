@@ -46,5 +46,4 @@ int main() {
     //std::cout << c2.var1 << "\n";
     //c3.var1 = 6;
     //std::cout << c3.var1 << "\n";
-    
 }
