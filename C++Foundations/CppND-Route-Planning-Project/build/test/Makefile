@@ -68,27 +68,6 @@ install/strip/fast: preinstall/fast
 	/usr/local/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/local/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -101,6 +80,17 @@ install/local/fast: preinstall/fast
 	/usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/local/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -111,6 +101,16 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target install
 install: preinstall
@@ -171,33 +171,6 @@ test/fast:
 	cd /home/hein/Documents/C++Nanodegree/C++Foundations/CppND-Route-Planning-Project/build && $(MAKE) -f test/CMakeFiles/test.dir/build.make test/CMakeFiles/test.dir/build
 .PHONY : test/fast
 
-utest_rp_a_star_search.o: utest_rp_a_star_search.cpp.o
-
-.PHONY : utest_rp_a_star_search.o
-
-# target to build an object file
-utest_rp_a_star_search.cpp.o:
-	cd /home/hein/Documents/C++Nanodegree/C++Foundations/CppND-Route-Planning-Project/build && $(MAKE) -f test/CMakeFiles/test.dir/build.make test/CMakeFiles/test.dir/utest_rp_a_star_search.cpp.o
-.PHONY : utest_rp_a_star_search.cpp.o
-
-utest_rp_a_star_search.i: utest_rp_a_star_search.cpp.i
-
-.PHONY : utest_rp_a_star_search.i
-
-# target to preprocess a source file
-utest_rp_a_star_search.cpp.i:
-	cd /home/hein/Documents/C++Nanodegree/C++Foundations/CppND-Route-Planning-Project/build && $(MAKE) -f test/CMakeFiles/test.dir/build.make test/CMakeFiles/test.dir/utest_rp_a_star_search.cpp.i
-.PHONY : utest_rp_a_star_search.cpp.i
-
-utest_rp_a_star_search.s: utest_rp_a_star_search.cpp.s
-
-.PHONY : utest_rp_a_star_search.s
-
-# target to generate assembly for a file
-utest_rp_a_star_search.cpp.s:
-	cd /home/hein/Documents/C++Nanodegree/C++Foundations/CppND-Route-Planning-Project/build && $(MAKE) -f test/CMakeFiles/test.dir/build.make test/CMakeFiles/test.dir/utest_rp_a_star_search.cpp.s
-.PHONY : utest_rp_a_star_search.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -205,15 +178,12 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... edit_cache"
-	@echo "... list_install_components"
-	@echo "... test"
 	@echo "... install/local"
+	@echo "... edit_cache"
+	@echo "... test"
 	@echo "... rebuild_cache"
+	@echo "... list_install_components"
 	@echo "... install"
-	@echo "... utest_rp_a_star_search.o"
-	@echo "... utest_rp_a_star_search.i"
-	@echo "... utest_rp_a_star_search.s"
 .PHONY : help
 
 
